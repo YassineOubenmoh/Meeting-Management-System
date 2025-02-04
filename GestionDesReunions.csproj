@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ECAB92FA-40E4-4F39-A130-EC32DFA5012B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestionDesReunions</RootNamespace>
+    <AssemblyName>GestionDesReunions</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.25.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.25.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.4.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.4.0\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NuGet.Frameworks, Version=6.10.0.107, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\NuGet.Frameworks.6.10.0\lib\net472\NuGet.Frameworks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AjouterUneReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjouterUneReunion.Designer.cs">
+      <DependentUpon>AjouterUneReunion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompteRenduChef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CompteRenduChef.Designer.cs">
+      <DependentUpon>CompteRenduChef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoiteDeReception.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoiteDeReception.Designer.cs">
+      <DependentUpon>BoiteDeReception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoiteDeReceptionChefProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoiteDeReceptionChefProjet.Designer.cs">
+      <DependentUpon>BoiteDeReceptionChefProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReunionParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReunionParticipant.Designer.cs">
+      <DependentUpon>ReunionParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Participant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Participant.Designer.cs">
+      <DependentUpon>Participant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserSession.cs" />
+    <Compile Include="Component1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component1.Designer.cs">
+      <DependentUpon>Component1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginChefDeProjet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginChefDeProjet.Designer.cs">
+      <DependentUpon>LoginChefDeProjet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginDuParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginDuParticipant.Designer.cs">
+      <DependentUpon>LoginDuParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableauDeBord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableauDeBord.Designer.cs">
+      <DependentUpon>TableauDeBord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalleReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalleReunion.Designer.cs">
+      <DependentUpon>SalleReunion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgrammerReunion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgrammerReunion.Designer.cs">
+      <DependentUpon>ProgrammerReunion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageAcceuil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageAcceuil.Designer.cs">
+      <DependentUpon>PageAcceuil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AjouterUneReunion.resx">
+      <DependentUpon>AjouterUneReunion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoiteDeReception.resx">
+      <DependentUpon>BoiteDeReception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompteRenduChef.resx">
+      <DependentUpon>CompteRenduChef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoiteDeReceptionChefProjet.resx">
+      <DependentUpon>BoiteDeReceptionChefProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReunionParticipant.resx">
+      <DependentUpon>ReunionParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginDuParticipant.resx">
+      <DependentUpon>LoginDuParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginChefDeProjet.resx">
+      <DependentUpon>LoginChefDeProjet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Participant.resx">
+      <DependentUpon>Participant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableauDeBord.resx">
+      <DependentUpon>TableauDeBord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalleReunion.resx">
+      <DependentUpon>SalleReunion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageAcceuil.resx">
+      <DependentUpon>PageAcceuil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgrammerReunion.resx">
+      <DependentUpon>ProgrammerReunion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
