@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meeting Management System</title>
 </head>
 
 <body>
 
 <header>
   <h1>📅 Meeting Management System</h1>
-  <p>Manage professors' meetings efficiently داخل المدرسة</p>
+  <p>Manage professors' meetings efficiently</p>
 </header>
 
 <main>
