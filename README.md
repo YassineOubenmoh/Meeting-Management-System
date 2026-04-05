@@ -9,7 +9,6 @@
 
 <header>
   <h1>📅 Meeting Management System</h1>
-  <p>Manage professors' meetings efficiently</p>
 </header>
 
 <main>
